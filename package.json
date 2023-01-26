@@ -1,5 +1,6 @@
 {
   "name": "rhook-ts",
+  "private": false,
   "version": "1.0.3",
   "description": "re-usable react toggle hook",
   "main": "index.ts",
