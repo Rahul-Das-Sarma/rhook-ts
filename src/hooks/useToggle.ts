@@ -1,15 +1,13 @@
-import { useCallback, useState } from "react";
+import { Dispatch, SetStateAction, useCallback, useState } from "react";
 
-type Props = {
-  active: boolean;
-};
+function useToggle(
+  defaultValue?: boolean
+): [boolean, () => void, Dispatch<SetStateAction<boolean>>] {
+  const [value, setValue] = useState(!!defaultValue);
 
-const useToggle = ({ active = false }: Props) => {
-  const [state, setState] = useState(active);
-  //   Toggle Function
-  const toggle = useCallback(() => setState((prevVal) => !prevVal), []);
+  const toggle = useCallback(() => setValue((x) => !x), []);
 
-  return [state, toggle];
-};
+  return [value, toggle, setValue];
+}
 
 export default useToggle;
