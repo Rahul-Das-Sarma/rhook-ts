@@ -1,20 +1,19 @@
 {
   "name": "rhook-ts",
   "private": false,
-  "version": "1.0.7",
+  "version": "1.1.7",
   "description": "re-usable react toggle hook",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
-  "files": [
-    "dist"
+    "files": [
+    "dist/**/*"
   ],
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm",
     "build:cjs": "tsc -p tsconfig.build.json --module commonjs --outDir dist/cjs --target es5",
     "build:esm": "tsc -p tsconfig.build.json --module esNext --outDir dist/esm --target es6",
-    "publish": "npm publish",
     "pack": "npm pack",
-    "clean":"rimraf -rf ./dist",
+    "clean": "rimraf -rf ./dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run start"
   },
@@ -35,6 +34,7 @@
     "@types/react-dom": "^18.0.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rimraf": "^4.1.2",
     "typescript": "^4.9.4"
   },
   "publishConfig": {
