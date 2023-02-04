@@ -1,11 +1,11 @@
 {
   "name": "rhook-ts",
   "private": false,
-  "version": "1.1.7",
-  "description": "re-usable react toggle hook",
+  "version": "1.1.8",
+  "description": "Reusable react toggle hook",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
-    "files": [
+  "files": [
     "dist/**/*"
   ],
   "scripts": {
@@ -15,6 +15,8 @@
     "pack": "npm pack",
     "clean": "rimraf -rf ./dist",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "semantic-release",
+    "bump": "bump --tag 'rhook-ts@%s' --commit 'release: rhook-ts@%s'",
     "start": "npm run start"
   },
   "keywords": [
@@ -25,7 +27,10 @@
     "type": "git",
     "url": "https://github.com/Rahul-Das-Sarma/rhook-ts.git"
   },
-  "author": "Rahul Das",
+  "author": {
+    "name": "Rahul Das",
+    "email": "rahuldas35748@gmail.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.2",
@@ -35,9 +40,17 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^4.1.2",
+    "semantic-release": "^20.1.0",
     "typescript": "^4.9.4"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org",
+    "access": "public",
+    "branches": [
+      "main"
+    ]
+  },
+  "dependencies": {
+    "all-contributors-cli": "^6.24.0"
   }
 }
