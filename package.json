@@ -51,7 +51,7 @@
     ]
   },
   "dependencies": {
-    "all-contributors-cli": "^6.24.0"
+    "all-contributors-cli": "^7.0.0"
   },
   "release": {
     "branches": [     
